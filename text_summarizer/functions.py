@@ -8,7 +8,7 @@ def summarize(prompt):
             model="text-davinci-003",
             prompt=augmented_prompt,
             temperature=.5,
-            max_tokens=110,
+            max_tokens=200,
             stop=". ",
         )["choices"][0]["text"]
     except:
