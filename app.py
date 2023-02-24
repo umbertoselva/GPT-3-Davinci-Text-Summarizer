@@ -9,7 +9,7 @@ try:
   if "summary" not in st.session_state:
       st.session_state["summary"] = ""
   
-  st.title("Title / Summary Generator")
+  st.title("Title Generator")
   
   input_text = st.text_area(label="Enter full text:", value="", height=250)
   st.button(
@@ -17,6 +17,6 @@ try:
       on_click=summarize,
       kwargs={"prompt": input_text},
   )
-  output_text = st.text_area(label="Title / Summary:", value=st.session_state["summary"], height=250)
+  output_text = st.text_area(label="Title:", value=st.session_state["summary"], height=250)
 except:
   st.write('There was an error =(')
